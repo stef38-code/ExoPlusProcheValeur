@@ -36,4 +36,14 @@ class PlusProcheValeurTest {
         //Vérifier la sortie (then)
         assertThat(resultat).isEqualTo(8);
     }
+    @Test
+    @DisplayName("La valeur la plus proche de 14 est 12")
+    void recherche_Lorsque_quatorze_Attend_douze() {
+        //Conditions préalables (given)
+        PlusProcheValeur plusProcheValeur = new PlusProcheValeur();
+        //Une action se produit (when)
+        Integer resultat = plusProcheValeur.rechercher(tableau,14);
+        //Vérifier la sortie (then)
+        assertThat(resultat).isEqualTo(12);
+    }
 }
