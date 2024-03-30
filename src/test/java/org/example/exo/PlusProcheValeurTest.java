@@ -26,5 +26,14 @@ class PlusProcheValeurTest {
         //Vérifier la sortie (then)
         assertThat(resultat).isEqualTo(8);
     }
-
+    @Test
+    @DisplayName("La valeur la plus proche de 7 est 8 (7 est à égale distance de 6 et 8, on prend le plus grand")
+    void recherche_Lorsque_sept_Attend_huit() {
+        //Conditions préalables (given)
+        PlusProcheValeur plusProcheValeur = new PlusProcheValeur();
+        //Une action se produit (when)
+        Integer resultat = plusProcheValeur.rechercher(tableau,7);
+        //Vérifier la sortie (then)
+        assertThat(resultat).isEqualTo(8);
+    }
 }
