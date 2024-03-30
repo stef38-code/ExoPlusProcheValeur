@@ -46,4 +46,15 @@ class PlusProcheValeurTest {
         //Vérifier la sortie (then)
         assertThat(resultat).isEqualTo(12);
     }
+    @Test
+    @DisplayName("La valeur la plus proche de -999 est 1")
+    void recherche_Lorsque_negatif_Attend_un() {
+        //Conditions préalables (given)
+        PlusProcheValeur plusProcheValeur = new PlusProcheValeur();
+        //Une action se produit (when)
+        Integer resultat = plusProcheValeur.rechercher(tableau,-999);
+        //Vérifier la sortie (then)
+        assertThat(resultat).isEqualTo(1);
+    }
+
 }
