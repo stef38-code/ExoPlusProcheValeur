@@ -56,5 +56,14 @@ class PlusProcheValeurTest {
         //Vérifier la sortie (then)
         assertThat(resultat).isEqualTo(1);
     }
-
+    @Test
+    @DisplayName("La valeur la plus proche de 999 est 18")
+    void recherche_Lorsque_superieurAuPlusGrandDuTableau_Attend_DixHuit() {
+        //Conditions préalables (given)
+        PlusProcheValeur plusProcheValeur = new PlusProcheValeur();
+        //Une action se produit (when)
+        Integer resultat = plusProcheValeur.rechercher(tableau,999);
+        //Vérifier la sortie (then)
+        assertThat(resultat).isEqualTo(18);
+    }
 }
